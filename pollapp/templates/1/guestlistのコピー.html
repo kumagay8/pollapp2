@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>参加者一覧</title>
+</head>
+  <body>
+
+    <p>guestlist 参加者一覧</p>
+
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>名前</th>
+          <th>フリガナ</th>
+          <th>e-mail</th>
+          <th>備考・同伴者</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for guest in guest_list %}
+          <tr>
+            <td>{{ guest.name }}</td>
+            <td>{{ guest.furi }}</td>
+            <td>{{ guest.email }}</td>
+            <td>{{ guest.remarks }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
+

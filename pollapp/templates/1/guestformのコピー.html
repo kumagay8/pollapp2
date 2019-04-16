@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>イベント紹介＆ゲスト入力</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/commom.css' %}">
+	</head>
+<body>
+	<p>prototype</p>
+
+<!--画像　ここからアップロード＋表示へ-->
+	{% load static%}
+<!--<	
+img src="{% static "eventform/background.jpeg"%}" style="max-height:500px" alt="テスト" title="background"
+>--->
+
+<!-- 文章 -->
+<!--関数を設置 
+	！！！これをmodels & formに作成！！！-->
+	<p>説明文章</p>
+	<ul>
+		<li>場所：</li>
+		<li>時間：</li>
+		<li>会費：</li>
+		<li>人数：</li>
+	</ul>
+<br>
+<hr>
+<br>
+	<form action ="" method="post">
+		{{ form.errors.guest }}
+	<ul>
+<!---		<li>
+			<label>名前：</label>
+			<label>{{ form.name }}</label>
+			<br>
+		</li>
+		<li>
+			<div class="furigana">
+			<label>フリガナ：</label>
+			<label>{{ form.furi }}</label>
+			<br>
+		</li>
+--->
+		<li>
+			<div class="mailaddress">
+			<label>メールアドレス：</label>
+			<label>{{ form.email }}</label>
+			<br>
+		</li>
+<!--
+		<li>
+			<div class="remarks">
+			<label>備考：</label>
+			<label>{{ form.remarks }}</label>
+			<br>
+		</li>
+--->
+		<li>
+			<br><br><br>
+			{% csrf_token %}
+			<input type="submit" value="送信">
+		</li>
+	</ul>
+	</form>
+</body>
+</html>

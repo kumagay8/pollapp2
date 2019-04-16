@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>参加者一覧</title>
+</head>
+  <body>
+
+    <p>guestlist 参加者一覧</p>
+      <p><a href="{% url 'pollapp:guestform' %}">フォームへ</a></p>
+      <br>
+      <p><a href="{% url 'pollapp:csvexport' %}">CSV出力</a></p>
+      <form method="post" action="">
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>名前</th>
+            <th>フリガナ</th>
+            <th>e-mail</th>
+            <th>メモ</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for Guest in Guests %}
+            <tr>
+              <td>{{ Guest.name }}</td>
+              <td>{{ Guest.furi }}</td>
+              <td>{{ Guest.email }}</td>
+              <td>{{ Guest.memo }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
+

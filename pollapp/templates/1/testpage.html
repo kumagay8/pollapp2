@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  testpage
+  </head>
+  <br>
+  <body>
+    {% for field in form %}
+    {{ field.label_tag }}{{ field.value }}
+      <br>
+    {% endfor %}
+    <p>このページはテストページです</p>
+
+    <p><a href="{% url 'pollapp:guestlist' %}">一覧へ</a></p>
+  </body>
+</html>
+

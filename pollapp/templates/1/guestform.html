@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>イベント紹介＆ゲスト入力</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/commom.css' %}">
+	</head>
+		<body>
+		<p>prototype</p>
+		<a href="{% url 'pollapp:guestlist' %}">戻る</a>
+			<form action ="{% url 'pollapp:testpage'%}" method="post">
+			{% for field in form %}
+			<div align="left">
+			<ul>
+				<li>
+					{{ field.label_tag }}{{ field }}
+					<br/>
+				</li>
+			</div>
+			{% endfor %}
+<br>
+<!--			<input type="checkbox" name="mailsend" value="mailsend"/>チェックを入れると登録情報がメールで送られます。-->
+<br>
+<hr>
+			{% csrf_token %}
+			<button type="submit">送信</button>
+			</ul>
+			</form>
+		</body>
+</html>
