@@ -27,7 +27,7 @@ def mailsend():
 class Command(BaseCommand):
 	def handle(self, *args, **options):
 		s = sched.scheduler(time.time, time.sleep)
-		start_time = datetime.strptime("2019/4/15 23:55", '%Y/%m/%d %H:%M')
+		start_time = datetime.strptime("2019/4/25 07:00", '%Y/%m/%d %H:%M')
 		time_second = (start_time - datetime.now()).seconds
 		s = sched.scheduler(time.time, time.sleep)
 		s.enter(time_second, 1, mailsend())
