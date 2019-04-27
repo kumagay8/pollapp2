@@ -17,8 +17,8 @@ def mailsend():
 	recipient_list = [(maildata.email) for maildata in maildata_list ]
 	from_email = "event.message.for.guests@gmail.com"
 
-	subject = "Subject here"
-	message = "message_test"
+	subject = "リマインダーメール"
+	message = "テストメールです。"
 	email=EmailMessage(subject, message, from_email, recipient_list)
 	email.send()
 	return mailsend

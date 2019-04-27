@@ -41,9 +41,13 @@ def testpage(request):
 			Guest.objects.create(**form.cleaned_data)
 
 	temp_email = request.POST['email']
+	temp_name = request.POST['name']
+	temp_furi = request.POST['furi']
+	temp_memo = request.POST['memo']
+
 	if 'email' in request.POST:
-		subject = "Subject here"
-		message = "message_test"
+		subject = "登録確認のお知らせ"
+		message = "以下のように登録しました。//n 名前：%s //n フリガナ：%s //n メールアドレス：%s //n 備考：%s //n 当日を待ちしております。" %(temp_name ,temp_furi ,temp_email ,temp_memo)
 		from_email = "event.message.for.guests@gmail.com"
 		to = ["event.message.for.guests@gmail.com"]
 		bcc = [temp_email]
@@ -55,6 +59,7 @@ def testpage(request):
 			}
 	return render(request, '1/testpage.html', context)
 
+"""
 def mailsend():
 
 	subject = "Subject here"
@@ -65,6 +70,7 @@ def mailsend():
 
 	email=EmailMessage(subject, message, from_email, to, bcc)
 	email.send()
+"""
 
 def CSVExportView(request):
 	response = HttpResponse(content_type='text/csv')

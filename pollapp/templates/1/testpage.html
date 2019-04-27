@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-  testpage
+  登録完了
   </head>
   <br>
   <body>
+    <p>以下のように登録しました。</p>
     {% for field in form %}
     {{ field.label_tag }}{{ field.value }}
       <br>
     {% endfor %}
-    <p>このページはテストページです</p>
 
     <p><a href="{% url 'pollapp:guestlist' %}">一覧へ</a></p>
   </body>
