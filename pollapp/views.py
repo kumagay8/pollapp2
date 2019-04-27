@@ -47,7 +47,7 @@ def testpage(request):
 
 	if 'email' in request.POST:
 		subject = "登録確認のお知らせ"
-		message = "以下のように登録しました。/n 名前：%s /n フリガナ：%s /n メールアドレス：%s /n 備考：%s /n 当日を待ちしております。" %(temp_name ,temp_furi ,temp_email ,temp_memo)
+		message = "以下のように登録しました。\n 名前：%s \n フリガナ：%s \n メールアドレス：%s \n 備考：%s \n当日を待ちしております。" %(temp_name ,temp_furi ,temp_email ,temp_memo)
 		from_email = "event.message.for.guests@gmail.com"
 		to = ["event.message.for.guests@gmail.com"]
 		bcc = [temp_email]
