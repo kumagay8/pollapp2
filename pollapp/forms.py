@@ -6,10 +6,16 @@ class GuestsForm(forms.ModelForm):
 	class Meta:
 		model = Guest
 		fields = ('name','furi','email','memo')
+		label = {
+			'name': '名前' ,
+			'furi': 'フリガナ' ,
+			'email': 'メールアドレス' ,
+			'memo': 'メモ(他の参加者をお連れする場合、その方の名前をご記入ください)',
+					}
 		widgets ={
-			'name':forms.TextInput(attrs={'size':30}),
-			'furi':forms.TextInput(attrs={'size':30}),
-			'email':forms.EmailInput(attrs={'size':40}),
+			'name':forms.TextInput(attrs={'size':42}),
+			'furi':forms.TextInput(attrs={'size':42}),
+			'email':forms.EmailInput(attrs={'size':42}),
 			'memo':forms.Textarea(attrs={'cols':40, 'rows':2}),
 		}
 		requireds = {
@@ -20,22 +26,7 @@ class GuestsForm(forms.ModelForm):
 					}
 		# requiredsはTrueかNone/’’を必ず入れる
 
-#	guest =forms.EmailField(
-#		label = 'email',
-#		widget = forms.EmailInput(attrs={'size':50}),	#EmailInput:EmailFieldのデフォルトのウィジェット
-#		required =  True,
-#		)
 
-#	class Meta:
-#		model = Guest
-#		fields = ("name","furi","email","memo")
-#		widgets = {
-#					'name':forms.TextInput(attrs={'size':30}),
-#					'furi':forms.TextInput(attrs={'size':30}),
-#					'email':forms.EmailInput(attrs={'size':50}),	#EmailInput:EmailFieldのデフォルトのウィジェット
-#					'memo':forms.Textarea(attrs={'rows':4, 'cols':50}),
-#					}
-					
 
 
 
