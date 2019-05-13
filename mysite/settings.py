@@ -131,7 +131,8 @@ USE_TZ = True
 
 #STATIC_URL = '/static/'
 STATIC_ROOT = (
-    os.path.join(BASE_DIR, "static")
+    '/home/kumagay8/pollapp/static/'
+#    os.path.join(BASE_DIR, "static")
     )
 
 ROOT_PATH = os.path.dirname(__file__)
