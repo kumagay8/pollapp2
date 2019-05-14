@@ -2,8 +2,6 @@ from django.conf import settings
 from django.db import models
 
 class Guest(models.Model):
-#	id = AutoField(primary_key=True) 						#自動追加のため定義不要
-
 	name = models.CharField(
 		max_length=30,
 		#verbose_name='名前',
