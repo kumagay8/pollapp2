@@ -2,10 +2,16 @@
 	body{
 		width:100%;
 	}
+	li {
+		font-size:18px;
+	}
 	}
 
 @media all and (max-width:670px){
 	body{
 		width:100%;
+	}
+	li {
+		font-size:18px;
 	}
 	}

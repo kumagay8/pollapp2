@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="main">	
-			以下の登録項目にご記入ください。
+			<p>以下の登録項目にご記入ください。</p>
 			<form action ="{% url 'pollapp:testpage'%}" method="post">
 			<ul>
 				<li>名前</li>
@@ -26,7 +26,7 @@
 				<li class="form">{{ form.email }}</li>
 				<li>メモ</li>
 				<li class="form">{{ form.memo }}<li/>
-				<li>※他の参加者をお連れする方は、その方の名前をご記入ください。</li>
+				<li class="postscript">※他の参加者をお連れする方は、その方の名前をご記入ください。</li>
 			</ul>
 			{% csrf_token %}
 			<button type="submit" class="btn">送信</button>
