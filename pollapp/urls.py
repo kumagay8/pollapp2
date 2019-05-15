@@ -2,6 +2,8 @@ from django.urls import path
 from django.contrib import admin
 from . import views
 from pollapp.views import  GuestListView , CSVExportView
+from django.conf import settings
+from django.conf.urls.static import static
 #, GuestFormView , GuestConfirmView , GuestRegisterView , GuestReplyView 
 
 app_name = 'pollapp'
@@ -19,5 +21,6 @@ urlpatterns = [
 	path('1/csvexport/', CSVExportView, name='csvexport'),
 
 #テストページ
-	path('1/testpage/', views.testpage, name='testpage')
-]
+	path('1/testpage/', views.testpage, name='testpage'),
+
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
