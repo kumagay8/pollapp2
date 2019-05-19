@@ -1,8 +1,8 @@
 
 body{
 	font-family: "Avenir Next"
-	-webkit-appearance:none;
 	-webkit-text-size-adjust:100%;
+	overflow: :hidden;
 }
 
 p {
@@ -49,4 +49,6 @@ p {
 	margin:10px 10px;
 	padding:5px;
 	font-size:15px;
+	-webkit-appearance:none;
+
 }
