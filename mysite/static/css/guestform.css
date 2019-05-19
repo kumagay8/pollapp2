@@ -3,6 +3,10 @@ body{
 	font-family: "Avenir Next"
 }
 
+p {
+	word-break: normal;
+}
+
 .header{
 	height: 40px;
 	width: 100%;
