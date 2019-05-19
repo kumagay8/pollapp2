@@ -49,6 +49,10 @@ p {
 	margin:10px 10px;
 	padding:5px;
 	font-size:15px;
+	border-radius:1px;
 
+}
 
+.btn :hover{
+	background-color: #4169E1;	
 }
