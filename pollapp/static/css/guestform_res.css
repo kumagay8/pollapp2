@@ -1,10 +1,10 @@
-@media all and (max-width:1000px){
+@media (max-width:1000px){
 	body{
 		width:100%;
 	}
 	}
 
-@media all and (max-width:670px){
+@media  (max-width:670px){
 	body{
 		width:100%;
 	}

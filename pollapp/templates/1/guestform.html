@@ -26,8 +26,9 @@
 				<li class="form">{{ form.email }}</li>
 				<li>メモ</li>
 				<li class="form">{{ form.memo }}<li/>
-				<li class="postscript">※他の参加者をお連れする方は、その方の名前をご記入ください。</li>
 			</ul>
+			<p>※他の参加者をお連れする方は、メモにその方の名前をご記入ください。</p>
+			
 			{% csrf_token %}
 			<button type="submit" class="btn">送信</button>
 			</form>

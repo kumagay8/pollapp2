@@ -10,7 +10,7 @@ class GuestsForm(forms.ModelForm):
 			'name': '名前' ,
 			'furi': 'フリガナ' ,
 			'email': 'メールアドレス' ,
-			'memo': 'メモ(他の参加者をお連れする場合、その方の名前をご記入ください)',
+			'memo': 'メモ',
 					}
 		widgets ={
 			'name':forms.TextInput(attrs={'size':42}),
