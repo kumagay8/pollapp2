@@ -6,11 +6,11 @@ class GuestsForm(forms.ModelForm):
 	class Meta:
 		model = Guest
 		fields = ('name','furi','email','memo')
-		label = {
-			'name': '名前' ,
-			'furi': 'フリガナ' ,
-			'email': 'メールアドレス' ,
-			'memo': 'メモ',
+		labels = {
+			'name':'名前' ,
+			'furi':'フリガナ' ,
+			'email':'メールアドレス' ,
+			'memo':'メモ',
 					}
 		widgets ={
 			'name':forms.TextInput(attrs={'size':42}),

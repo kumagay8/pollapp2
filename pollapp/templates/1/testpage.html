@@ -1,17 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
-  登録完了
+    <meta charset="utf-8">
+    <title>登録完了</title>
+    <meta name= "viewport"
+     content="width=device-width,user-scalable=no,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/testpage.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/testpage_res.css' %}">
   </head>
-  <br>
   <body>
-    <p>以下のように登録しました。</p>
-    {% for field in form %}
-    {{ field.label_tag }}{{ field.value }}
-      <br>
-    {% endfor %}
-
-    <p><a href="{% url 'pollapp:guestlist' %}">一覧へ</a></p>
+    <header></header>
+    <main>
+      <p>以下のように登録が完了しました。</p>
+      <table boder="0">
+        {% for field in form %}
+        <tr>
+          <td>{{ field.label }}</td>
+          <td>{{ field.value }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <p>※イベント前日にリマインドメールが届きます。</p>
+      <p>登録は以上です。画面を閉じてください。</p>
+    </main>
   </body>
 </html>
 
