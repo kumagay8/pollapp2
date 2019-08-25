@@ -11,16 +11,16 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
 #主催者の確認ページ
 #	path('1/guestlist/', GuestListView.as_view(), name='list'),
-	path('1/guestlist/', GuestListView, name='guestlist'),
+	path('2/guestlist/', GuestListView, name='guestlist'),
 
 
 #ゲストユーザ登録の為の入力フォーム
-	path('1/guestform/', views.GuestFormView, name='guestform'),	
+	path('2/guestform/', views.GuestFormView, name='guestform'),	
 
 #ゲストユーザの情報をCSVで出力するページ
-	path('1/csvexport/', CSVExportView, name='csvexport'),
+	path('2/csvexport/', CSVExportView, name='csvexport'),
 
 #テストページ
-	path('1/testpage/', views.testpage, name='testpage'),
+	path('2/testpage/', views.testpage, name='testpage'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

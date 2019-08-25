@@ -22,7 +22,7 @@ def GuestListView(request):
 	d = {
 		'Guests': Guest.objects.all(),
 	}
-	return render(request,'1/guestlist.html',d)
+	return render(request,'2/guestlist.html',d)
 
 
 def GuestFormView(request):
@@ -31,7 +31,7 @@ def GuestFormView(request):
 	context = {
 		'form': form,
 	}
-	return render(request,'1/guestform.html', context )
+	return render(request,'2/guestform.html', context )
 
 
 def testpage(request):
@@ -57,7 +57,7 @@ def testpage(request):
 	context = {
 			'form': form,
 			}
-	return render(request, '1/testpage.html', context)
+	return render(request, '2/testpage.html', context)
 
 """
 def mailsend():
